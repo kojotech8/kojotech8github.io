@@ -14,7 +14,7 @@
             color: #333;
         }
 
-        /* Logo (Default for Desktop) */
+        /* Logo Default (Desktop) */
         .logo {
             position: absolute;
             left: 20px;
@@ -24,6 +24,7 @@
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         /* Header */
@@ -45,11 +46,14 @@
             list-style: none;
             padding: 0;
             margin: 15px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 20px;
         }
 
         nav ul li a {
@@ -111,7 +115,7 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            text-align: center;
+            display: inline-block;
             transition: background-color 0.3s ease;
         }
 
@@ -140,6 +144,7 @@
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
+            text-align: justify;
         }
 
         /* Footer */
@@ -158,14 +163,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            /* Move logo above header */
+            /* Move logo above header and center it */
             .logo {
                 position: relative;
                 display: block;
                 text-align: center;
                 margin: 20px auto;
-                font-size: 26px;
+                font-size: 28px;
                 color: #0073e6;
+                font-weight: bold;
+                width: 100%;
+                text-transform: uppercase;
             }
 
             header {
@@ -181,11 +189,13 @@
                 padding: 0;
                 margin: 10px 0;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
             }
 
             nav ul li {
                 display: block;
-                margin: 10px 0;
             }
 
             .hero {
@@ -199,6 +209,7 @@
 
             .hero p {
                 font-size: 16px;
+                text-align: justify;
             }
 
             section {
@@ -210,7 +221,7 @@
 </head>
 <body>
 
-    <div class="logo">HealthHub</div> <!-- Logo moved outside header -->
+    <div class="logo">HealthHub</div> <!-- Logo moved above header -->
     
     <header>
         <h1>Welcome to Our Healthcare Services</h1>
