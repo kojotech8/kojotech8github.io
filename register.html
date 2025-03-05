@@ -23,11 +23,13 @@
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 5px 15px;
         }
 
         nav ul li a {
@@ -37,21 +39,23 @@
         }
 
         .register-form {
-            width: 40%;
+            max-width: 90%;
+            width: 400px;
             margin: 30px auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
 
         .register-form h2 {
             color: #333;
+            text-align: center;
         }
 
         .register-form label {
             display: block;
-            text-align: left;
             margin-top: 10px;
             font-weight: bold;
         }
@@ -82,6 +86,7 @@
 
         .register-form p {
             margin-top: 15px;
+            text-align: center;
         }
 
         .register-form a {
@@ -91,6 +96,17 @@
 
         .register-form a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
