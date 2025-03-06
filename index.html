@@ -18,39 +18,29 @@
         header {
             background: #0073e6;
             color: white;
-            text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative; /* Ensure the logo stays inside the header */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Ensures space between logo and nav */
+            position: relative;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        /* Logo Default (Desktop) */
+        /* Logo */
         .logo {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             font-size: 24px;
             font-weight: bold;
-            color: #fff;
+            color: white;
             text-transform: uppercase;
-            white-space: nowrap;
-            z-index: 10; /* Ensure it's above other elements */
+            margin-left: 20px; /* Ensures it stays at the left */
         }
 
+        /* Navigation */
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 15px 0 0 0;
+            margin: 0;
             display: flex;
-            justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -164,39 +154,20 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            /* Move logo above header and center it */
-            .logo {
-                position: relative;
-                display: block;
-                text-align: center;
-                margin: 10px auto;
-                font-size: 28px;
-                color: #0073e6;
-                font-weight: bold;
-                width: 100%;
-                text-transform: uppercase;
-            }
-
             header {
-                padding-top: 10px;
+                flex-direction: column;
+                text-align: center;
             }
 
-            header h1 {
-                font-size: 22px;
-                margin-top: 5px;
+            .logo {
+                margin-bottom: 10px;
+                text-align: center;
             }
 
             nav ul {
-                padding: 0;
-                margin: 10px 0;
-                text-align: center;
-                display: flex;
                 flex-direction: column;
                 gap: 10px;
-            }
-
-            nav ul li {
-                display: block;
+                text-align: center;
             }
 
             .hero {
@@ -224,7 +195,6 @@
 
     <header>
         <div class="logo">HealthHub</div> <!-- Logo inside header -->
-        <h1>Welcome to Our Healthcare Services</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
